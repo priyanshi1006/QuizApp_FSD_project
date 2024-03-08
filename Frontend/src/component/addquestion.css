@@ -1,0 +1,63 @@
+.container {
+    background-color:  #6196A6;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.question-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4; /* Set background color for the admin page */
+}
+
+.card {
+    border: none;
+}
+
+.card-header {
+    background-color:  #6196A6;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.card-title {
+    margin-bottom: 0;
+    color: black;
+    font-size: 24px;
+}
+
+.form-label {
+    color: black;
+}
+.btn-outline-primary {
+    color: white;
+}
+.btn-outline-primary:hover {
+    color:white;
+}
+
+
+.btn-outline-danger {
+    color: #dc3545;
+    border-color: #dc3545;
+}
+
+.btn-outline-danger:hover {
+    color: #fff;
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+.container input[type="text"],
+.container textarea {
+    background-color: white;
+    color:black;
+}
+.btn-sec{
+    color: black;
+}
+.btn-sec:hover{
+    color:#A4CE95;
+}
+

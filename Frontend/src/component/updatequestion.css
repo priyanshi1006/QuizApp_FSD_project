@@ -1,0 +1,8 @@
+.update-container{
+    background-color: white;
+    display: flex;
+    justify-content: center; /* Horizontally center */
+    align-items: center; /* Vertically center */
+    min-height: 100vh;
+    width: 100%;
+}

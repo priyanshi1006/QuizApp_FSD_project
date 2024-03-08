@@ -1,0 +1,41 @@
+.admin-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4; /* Set background color for the admin page */
+}
+
+.container {
+    background-color: #6196A6;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+}
+
+h2 {
+    font-size: 24px;
+    margin-top: 20px;
+    text-align: center;
+    color: black;
+}
+
+hr {
+    margin: 20px 0;
+    border: none;
+    border-top: 1px solid #ccc;
+}
+
+.nav-link {
+    display: block;
+    padding: 10px 0;
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #A4CE95;
+}
