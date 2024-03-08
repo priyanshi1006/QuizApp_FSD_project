@@ -19,12 +19,13 @@ const AnswerOptions = ({ question, isChecked, handleAnswerChange, handleCheckbox
 					<div key={choice} className="form-check mb-3">
 						<input
 							className="form-check-input"
-							type="radio"
+							type="radio"  
 							id={choice}
 							name={question.id}
 							value={choice}
 							checked={isChecked(question.id, choice)}
 							onChange={() => handleAnswerChange(id, choice)}
+							
 						/>
 						<label htmlFor={choice} className="form-check-label ms-2">
 							{choice}

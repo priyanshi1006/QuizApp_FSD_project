@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 import { getSubjects } from "./QuizService"
+import '/src/component/quizstapper.css';
+import Navbar from "./Header";
+import '/src/component/quizstapper.css';
+
 
  const QuizStepper = () => {
 		const [currentStep, setCurrentStep] = useState(1)
@@ -75,6 +79,7 @@ import { getSubjects } from "./QuizService"
 								value={selectedNumQuestions}
 								onChange={handleNumQuestionsChange}
 								placeholder="Enter the number of questions"
+								style={{ backgroundColor: "white", color:"black"}} 
 							/>
 						</div>
 					)
@@ -94,7 +99,7 @@ import { getSubjects } from "./QuizService"
 		const renderProgressBar = () => {
 			const progress = currentStep === 3 ? 100 : ((currentStep - 1) / 2) * 100
 			return (
-				<div className="progress">
+				<div className="progress"  style={{color:"green"}}>
 					<div
 						className="progress-bar"
 						role="progressbar"
@@ -107,12 +112,15 @@ import { getSubjects } from "./QuizService"
 		}
 
 		return (
-			<section className="mt-5">
-				<h3 style={{ color: "GrayText" }} className="mb-4">
+			<>
+			<Navbar/>
+	        <div className="quizstapper-container">
+			<section className="container">
+				<h3 style={{ color: "black" }} className="mb-4">
 					Welcome to quiz online
 				</h3>
 				{renderProgressBar()}
-				<div className="card">
+				<div className="card" style={{color:"black"}}>
 					<div className="card-body">
 						{renderStepContent()}
 						<div className="d-flex justify-content-between mt-4">
@@ -141,6 +149,9 @@ import { getSubjects } from "./QuizService"
 					</div>
 				</div>
 			</section>
+
+			</div>
+			</>
 		)
  }
 

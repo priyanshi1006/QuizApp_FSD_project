@@ -1,0 +1,12 @@
+.quizstapper-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: white;
+}
+.step-content {
+    color: red; /* Change the text color */
+    /* Add any other styling you want for step 1 */
+}

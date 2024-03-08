@@ -13,6 +13,7 @@ import GetAllQuiz from './component/GetAllQuiz.jsx'
 import UpdateQuestion from './component/UpdateQuestion.jsx'
 import Quiz from './component/Quiz.jsx'
 import QuizStepper from './component/QuizStapper.jsx'
+import QuizResult from './component/QuizResult.jsx'
 
 
 
@@ -65,7 +66,13 @@ const router=createBrowserRouter(
     {
       path:'/take-quiz',
       element:(
-        <Quiz selectedSubject = "Java" selectedNumQuestions= "1"/>
+        <Quiz />
+      )
+    },
+    {
+      path:'/quiz-result',
+      element:(
+        <QuizResult/>
       )
     }
 

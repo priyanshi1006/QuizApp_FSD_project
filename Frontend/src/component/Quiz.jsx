@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react"
-import { useNavigate, useLocation } from "react-router-dom"
+import { useNavigate, useLocation, NavLink } from "react-router-dom"
 import { fetchQuizForUser } from "./QuizService"
 import AnswerOptions from "./AnswerOptions"
+import Navbar from "./Header"
+import '/src/component/quiz.css';
 
 const Quiz = () => {
 	const [quizQuestions, setQuizQuestions] = useState([
@@ -125,7 +127,11 @@ const handleSubmit = () => {
 	}
 
 	return (
-		<div className="p-5">
+		<>
+		<Navbar/>
+		<div className="quiz-container">
+		<div className="container">
+		<div className="p-5"  style={{color:"black"}}>
 			<h3 className="text-info">
 				Question {quizQuestions.length > 0 ? currentQuestionIndex + 1 : 0} of {quizQuestions.length}
 			</h3>
@@ -163,6 +169,9 @@ const handleSubmit = () => {
 				</button>
 			</div>
 		</div>
+		</div>
+		</div>
+		</>
 	)
 }
 
