@@ -34,7 +34,7 @@ public class quizserviceimpl implements quizservice{
         String email = s.getEmail();
         User s1 = userdao.findByEmail(email);
 
-        if (s1.getPassword().equals(s.getPassword())) {
+        if (s1!= null && s1.getPassword().equals(s.getPassword())) {
             return s1;
 
         } else

@@ -10,7 +10,7 @@ import org.springframework.data.jpa.repository.Query;
 import java.util.List;
 
 public interface questiondao extends JpaRepository<Question,Long> {
-    @Query("SELECT DISTINCT q.subject FROM Question q")
+    @Query("SELECT DISTINCT q.subject FROM Question q WHERE q.subject IS NOT NULL")
     List<String> findDistinctSubject();
     Page<Question> findBySubject(String subject, Pageable pageable);
 

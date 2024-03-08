@@ -87,6 +87,7 @@ public class mycontroller {
         return ResponseEntity.ok(subjects);
     }
 
+    @CrossOrigin(origins = "http://localhost:5173")
     @GetMapping("/quiz/fetch-questions-for-user/{numOfQuestions}/{subject}")
     public ResponseEntity<List<Question>> getQuestionsForUser(
             @PathVariable Integer numOfQuestions, @PathVariable String subject){
