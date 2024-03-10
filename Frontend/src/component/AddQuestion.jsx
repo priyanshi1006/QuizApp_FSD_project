@@ -242,12 +242,14 @@ const AddQuestion = () => {
 								)}
 
 								{!correctAnswers.length && <p>Please enter at least one correct answer.</p>}
-
+							     
+                               
 								<div className="btn-group">
-									<button type="submit" className="btn btn-outline-success mr-2">
+									<button type="submit" className="btn btn-outline-success mr-2 " style={{background:"green"}}>
 										Save Question
 									</button>
                                     <br></br>
+									<br></br>
 									<Link to={"/all-quizzes"} className="btn-sec" >
 										Back to existing questions
 									</Link>

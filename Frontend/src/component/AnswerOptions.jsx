@@ -1,4 +1,5 @@
-import React from "react"
+import  React from "react"
+import '/src/component/answeroptions.css';
 
 const AnswerOptions = ({ question, isChecked, handleAnswerChange, handleCheckboxChange }) => {
 	if (!question) {
@@ -16,10 +17,10 @@ const AnswerOptions = ({ question, isChecked, handleAnswerChange, handleCheckbox
 		return (
 			<div>
 				{choices.sort().map((choice, index) => (
-					<div key={choice} className="form-check mb-3">
+					<div key={choice} className="form-check mb-3" >
 						<input
-							className="form-check-input"
-							type="radio"  
+							className="form-check-input" 
+							type="radio"   
 							id={choice}
 							name={question.id}
 							value={choice}
@@ -27,7 +28,7 @@ const AnswerOptions = ({ question, isChecked, handleAnswerChange, handleCheckbox
 							onChange={() => handleAnswerChange(id, choice)}
 							
 						/>
-						<label htmlFor={choice} className="form-check-label ms-2">
+						<label htmlFor={choice} className="form-check-label ms-2 " style={{ color: "white" }}  >
 							{choice}
 						</label>
 					</div>
@@ -38,7 +39,7 @@ const AnswerOptions = ({ question, isChecked, handleAnswerChange, handleCheckbox
 		return (
 			<div>
 				{choices.sort().map((choice, index) => (
-					<div key={choice} className="form-check mb-3">
+					<div key={choice} className="form-check mb-3" style={{color:"white"}}>
 						<input
 							className="form-check-input"
 							type="checkbox"

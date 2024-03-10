@@ -73,7 +73,7 @@ const UpdateQuestion = () => {
         <Navbar/>
         <div className="update-container">
         <div className="container">
-            <h4 className="mt-5" style={{ color: "black" }}>
+            <h4 className="mt-5" style={{ color: "black" , fontSize:"20px" }}>
                 Update Quiz Question
             </h4>
             <div className="col-8">
@@ -88,17 +88,19 @@ const UpdateQuestion = () => {
                     </div>
 
                     <div className="form-group">
-                        <label className="text-info " style={{color:"black"}}>Choices:</label>
-                        {choices.map((choice, index) => (
+                    <label className="text-info " style={{color:"black"}}>Choices:</label>
+                    {/* Render each choice in a single column */}
+                    {choices.map((choice, index) => (
+                        <div key={index} className="single-column">
                             <input
-                                key={index}
                                 type="text"
                                 className="form-control mb-4"
                                 value={choice}
                                 onChange={(e) => handleChoiceChange(index, e)}
                             />
-                        ))}
-                    </div>
+                        </div>
+                    ))}
+                </div>
                     <div className="form-group">
                         <label className="text-info"  style={{color:"black"}}>Correct Answer(s):</label>
                         <input
@@ -110,7 +112,7 @@ const UpdateQuestion = () => {
                     </div>
 
                     <div className="btn-group">
-                        <button type="submit" className="btn btn-sm btn-outline-warning">
+                        <button type="submit" className="btn btn-sm btn-outline-warning" style={{background:"green"}}>
                             Update question
                         </button>
                         <br></br>

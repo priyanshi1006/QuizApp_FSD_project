@@ -21,10 +21,10 @@ import '/src/component/quizresult.css';
 		return (
             <>
             <Navbar/>
-            <div className="quizresult-container">
+            <div className="quizresult-container" style={{color:"black "}}>
             
 			<section className="container">
-				<h3>Your Quiz Result Summary</h3>
+				<h3 style={{fontSize:"20px"}}>Your Quiz Result Summary</h3>
 				<hr />
 				<h5 className="text-info">
 					You answered {totalScores} out of {numQuestions} questions correctly.

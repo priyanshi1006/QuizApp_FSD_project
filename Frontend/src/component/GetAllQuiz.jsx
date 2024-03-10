@@ -51,7 +51,7 @@ const GetAllQuiz = () => {
         <section className="container" style={{justifyContent:"center"}}>
             <div className="row mt-5">
                 <div className="col-md-6 mb-2 md-mb-0" style={{ color: "black" }}>
-                    <h4>All Quiz Questions</h4>
+                    <h4 style={{fontSize:"20px"}}>All Quiz Questions</h4>
                 </div>
                 <div className="col-md-4 d-flex justify-content-end">
       <Link to={"/create-quiz"} className="add-question-link">
@@ -66,14 +66,14 @@ const GetAllQuiz = () => {
             {questions.map((question, index) => (
                 <div key={question.id}>
                     <pre>
-                        <h4 style={{ color: "black" }}>{`${index + 1}. ${question.question}`}</h4>
+                        <h4 style={{ color: "black", fontSize:"20px" }}>{`${index + 1}. ${question.question}`}</h4>
                     </pre>
                     <ul>
                         {question.choices.map((choice, index) => (
                             <li key={index}>{choice}</li>
                         ))}
                     </ul>
-                    <p className="text-success">Correct Answer: {question.correctAnswers}</p>
+                    <h4 className="text-success " style={{color:"black"}}>Correct Answer: {question.correctAnswers}</h4>
                     <div className="btn-group mb-4">
                         <Link to={`/update-quiz/${question.id}`}>
                             <button className="btn btn-sm btn-outline-warning mr-2">Edit Question</button>

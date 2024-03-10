@@ -9,7 +9,7 @@ const Home = () => {
 			<Navbar/>
 			<div className="main-container">
 			<h1>Welcome   to   online   quiz   for   everyone!!!</h1>
-			<img src="src/assets/quiz.jpg.jpg" alt="Your image" className="center-image" />
+			<img src="src/assets/quiz.png" alt="Your image" className="center-image" />
 		</div>
 		</>
 	)

@@ -136,7 +136,7 @@ const handleSubmit = () => {
 				Question {quizQuestions.length > 0 ? currentQuestionIndex + 1 : 0} of {quizQuestions.length}
 			</h3>
 
-			<h4 className="mb-4">
+			<h4 className="mb-4" style={{color:"black" , fontSize:"20px"}}>
 				<pre>{quizQuestions[currentQuestionIndex]?.question}</pre>
 			</h4>
 

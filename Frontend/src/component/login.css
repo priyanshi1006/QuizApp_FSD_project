@@ -1,12 +1,12 @@
 .page-container {
-    height: 100vh; 
-    background-image: url('src/assets/background6.jpg'); 
+    height: 100vh;  
     background-size: cover; 
     background-position: center; 
     display: flex; 
     justify-content: center; 
     align-items: center;
     width: 100vw; 
+    background:linear-gradient(135deg, #5F5D9C, #6196A6, #A4CE95, #F4EDCC);;
   }
  
   
@@ -15,8 +15,12 @@
     height: auto; 
     margin: 0 auto; 
     padding: 30px;
-    border: 1px solid #ccc;
+    border: 1px solid black;
     border-radius: 5px;
+    background-color:whitesmoke;
+    color: black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1.0);
+
     
   }  
   
@@ -34,8 +38,10 @@
   input[type="password"] {
     width: 100%;
     padding: 8px;
-    border: 1px solid #ccc;
+    border: 5px solid black;
     border-radius: 4px;
+    background-color: whitesmoke;
+    color: #090909;
   }
   
   .button {
@@ -48,7 +54,7 @@
     
 }
 .submit-btn:hover {
-    background-color: #a80c74; 
+    background-color:  rgb(154, 226, 154); 
   }
   
   .signup-link p {

@@ -6,3 +6,10 @@
     min-height: 100vh;
     width: 100%;
 }
+
+
+/* updatequestion.css */
+
+.single-column {
+    display: block;
+}

@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, } from 'react';
 import { Link } from 'react-router-dom'; // Import Link and useHistory from react-router-dom
 import axios from 'axios';
 import '/src/component/login.css';
+import { useNavigate } from 'react-router-dom';
 
 
 
@@ -10,7 +11,7 @@ const LoginForm = () => {
     email: '',
     password: ''
   });
-
+   const navigate=useNavigate();
 
 
   const handleChange = (e) => {
@@ -23,6 +24,8 @@ const LoginForm = () => {
         const response = await axios.post('http://localhost:9090/verifyUser', formData);
         if (response.data) {
           alert('Login successful');
+          navigate('/home')
+
         } else {
           alert('Invalid email or password');
         }
@@ -34,7 +37,7 @@ const LoginForm = () => {
   return (
     <div className="page-container">
     <div className="login-container" >
-      <h1>Login</h1>
+      <h3>Login</h3>
       <form onSubmit={handleSubmit}>
         <div className="form-group">
           <label htmlFor="email">Email:</label>

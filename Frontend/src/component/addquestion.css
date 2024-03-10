@@ -2,7 +2,7 @@
     background-color:  #6196A6;
     padding: 20px;
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .question-container {
@@ -10,7 +10,7 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f4f4f4; /* Set background color for the admin page */
+    background-color: #f4f4f4; 
 }
 
 .card {
@@ -53,11 +53,13 @@
 .container textarea {
     background-color: white;
     color:black;
+    width: calc(40% - 10px); 
 }
 .btn-sec{
     color: black;
 }
 .btn-sec:hover{
-    color:#A4CE95;
+    color:white
 }
+
 

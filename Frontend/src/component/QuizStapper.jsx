@@ -99,7 +99,7 @@ import '/src/component/quizstapper.css';
 		const renderProgressBar = () => {
 			const progress = currentStep === 3 ? 100 : ((currentStep - 1) / 2) * 100
 			return (
-				<div className="progress"  style={{color:"green"}}>
+				<div className="progress"  style={{color:"white"}}>
 					<div
 						className="progress-bar"
 						role="progressbar"
