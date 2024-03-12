@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import { json, useNavigate } from 'react-router-dom';
 import '/src/component/signup.css';
 
 
@@ -25,7 +25,9 @@ const SignupForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:9090/signup', formData);
+      const userData  = await axios.post('http://localhost:9090/signup', formData).then(res => res.data);
+      localStorage.clear();
+      localStorage.setItem("user", JSON.stringify(userData));
       alert('Signup successful!');
       navigate('/home')
 

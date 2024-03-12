@@ -62,6 +62,8 @@ public class quizserviceimpl implements quizservice{
 
     @Override
     public Question createQuestion(Question question) {
+        User u = userdao.findByEmail(question.getUser().getEmail());
+        question.setUser(u);
         questiondao.save(question);
         return question;
     }

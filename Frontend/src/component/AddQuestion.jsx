@@ -4,7 +4,8 @@ import axios from "axios";
 import '/src/component/addquestion.css'
 import Navbar from "./Header";
 
-const AddQuestion = () => {
+
+const AddQuestion = ({}) => {
     const [question, setQuestionText] = useState("");
     const [questionType, setQuestionType] = useState("single");
     const [choices, setChoices] = useState([""]);
@@ -60,6 +61,7 @@ const AddQuestion = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+		const user = localStorage.getItem("user")
         try {
             const result = {
                 question,
@@ -70,8 +72,11 @@ const AddQuestion = () => {
                     const choiceIndex = choiceLetter.charCodeAt(0) - 65;
                     return choiceIndex >= 0 && choiceIndex < choices.length ? choiceLetter : null;
                 }),
+				user : JSON.parse(user),
                 subject
             };
+
+			console.log(result)
 
             await axios.post('http://localhost:9090/create-new-question', result);
 
