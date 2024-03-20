@@ -28,3 +28,12 @@ To get a local copy up and running, follow these steps:
 6. Run the frontend server: npm run dev
 7. Open your browser and go to http://localhost:5173 to view the application.
 
+## Contributing
+
+Contributions are welcome! If you'd like to contribute to this project, please follow these steps:
+
+1. Fork the project.
+2. Create your feature branch: git checkout -b feature/NewFeature
+3. Commit your changes: git commit -m 'Add some feature'
+4. Push to the branch: git push origin feature/NewFeature
+5. Open a pull request.
