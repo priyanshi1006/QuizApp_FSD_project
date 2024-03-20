@@ -21,14 +21,13 @@ const LoginForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-        const response = await axios.post('http://localhost:9090/verifyUser', formData);
-        if (response.data) {
-          alert('Login successful');
-          navigate('/home')
-
-        } else {
-          alert('Invalid email or password');
-        }
+       
+      const userData  = await axios.post('http://localhost:9090/verifyUser', formData).then(res => res.data);
+      localStorage.clear();
+      localStorage.setItem("user", JSON.stringify(userData));
+      alert('Login successful!');
+      navigate('/home')
+        
       } catch (error) {
         console.error('Login error:', error);
       }
