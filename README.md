@@ -1,6 +1,6 @@
 # Questify
 
-Questify is a simple blog website that allows users to register, login, and perform CRUD operations on their questions. It is built using Spring Boot for the backend and React for the frontend.
+Questify is a quiz website that allows users to register, login,  perform CRUD operations on their questions, take quiz, generate the result summary of quiz. It is built using Spring Boot for the backend and React for the frontend.
 
 ## Features
 
@@ -8,6 +8,7 @@ Questify is a simple blog website that allows users to register, login, and perf
 - User Login: Registered users can log in to their accounts securely.
 - Question Creation: Users can create new Questions, selecting a subject, adding choices.
 - Question Management: Users can view, edit, and delete their existing Questions.
+- Taking Quiz: Users can take the quiz and result of the quiz will be generated at end.
 
 ## Technologies Used
 
